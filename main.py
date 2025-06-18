@@ -58,6 +58,8 @@ def main():
         name=input("\n Enter the video name: ")
         description=input("\n Enter the video description: ")
         tags= input("\n Enter tags seperated by comma: ")
+        tags_list = [tag.strip() for tag in tags.split(",")]
+        tags_str = ",".join(tags_list)
 
         if db.insert_data([name, description, tags]):
             print("Video has been added successfully!")
