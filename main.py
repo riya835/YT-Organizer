@@ -77,7 +77,7 @@ def main():
             print("\n Video tags : " + str(item[3]))
 
     elif choice == "3":
-        record_id= input("\n Enter the course Id: ")
+        record_id= input("\n Enter the video Id: ")
         
         if db.delete_data(record_id):
             print("\n Video was deleted successfully!")
