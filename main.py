@@ -35,6 +35,7 @@ class DatabaseManage(object):
                 cur=con.cursor()
                 sql="DELETE FROM ytvid WHERE id=?"
                 cur.execute(sql,[id])
+                return True
         except Exception:
             return False
         
